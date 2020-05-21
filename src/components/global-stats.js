@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import useStats from "../utils/fetch-useStats";
+import { useStats } from "../utils/fetch-useStats";
 // import deviceBreakingPoint from "./cssBreakPoint";
 
 const StatGrid = styled.div`
@@ -43,7 +43,6 @@ export default function Stats({ url }) {
   const confirmedData = stats?.confirmed?.value || "No data available"
   const recoveredData = stats?.recovered?.value || "No data available"
   const deathsData = stats?.deaths?.value || "No data available"
-  console.log(stats, loading, error);
   if (loading) return <p>Loading... </p>;
   if (error) return <p>Error... </p>;
   return (

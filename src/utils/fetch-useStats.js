@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function useStats(url) {
+export const useStats = (url) => {
   const [stats, setStats] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
@@ -13,7 +13,6 @@ export default function useStats(url) {
           setError(err);
         })
       );
-      console.log("data", data)
       setStats(data);
       setLoading(false);
     }

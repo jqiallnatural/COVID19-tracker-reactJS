@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 
-import useStats from '../utils/fetch-useStats'
+import { useStats } from '../utils/fetch-useStats'
 
 const UpdateContainer = styled.div`
   display: flex;

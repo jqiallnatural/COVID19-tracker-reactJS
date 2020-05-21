@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useStats from "../utils/fetch-useStats";
+import { useStats } from "../utils/fetch-useStats";
 import Stats from "./global-stats";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -27,7 +27,6 @@ const SelectContainer = styled.div`
 export default function Countries() {
   const { stats: countries, loading, error } =
     useStats("https://covid19.mathdro.id/api/countries") || {};
-  console.log("countries", countries);
   const [selectedCountry, setSelectedCountry] = useState("CAN");
   // If you get partial error in a complex API
   if (loading) return <p>Loading... </p>;
